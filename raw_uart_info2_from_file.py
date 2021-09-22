@@ -1,278 +1,88 @@
 raw_uart_info2 = \
 ('''
-DSI 3, Sensor 2, PDCM 08: 0x25f1 0x00e1 0xc294 0x28c3 0x0084 0x01c1 0xab5c 0xc955
-EnvelopeFrameCounter: 0, LF flag: 0
-DSI 3, Sensor 3, PDCM 08: 0x35f2 0x00e1 0xd081 0x1002 0x1104 0x110d 0x0d50 0x6031
-EnvelopeFrameCounter: 0, LF flag: 0
-DSI 3, Sensor 1, PDCM 09: 0x16f2 0x00df 0x8516 0x0000 0x0000 0x0000 0x0000 0x00b8
-EnvelopeFrameCounter: 1, LF flag: 0
-num: 52, height: 2976
-num: 53, height: 1920
-num: 54, height: 1376
-num: 55, height: 672
-num: 56, height: 896
-num: 57, height: 1760
-num: 58, height: 2624
-num: 59, height: 3200
-num: 60, height: 6784
-num: 61, height: 7040
-DSI 3, Sensor 2, PDCM 09: 0x26f1 0x01ab 0x7061 0x5156 0x071b 0x1b12 0x8130 0x0866
-EnvelopeFrameCounter: 1, LF flag: 0
-num: 53, height: 25248
-num: 57, height: 1152
-num: 58, height: 4768
-num: 59, height: 4928
-num: 60, height: 1536
-num: 61, height: 6528
-DSI 3, Sensor 1, PDCM 10: 0x17f1 0x01b0 0x42c3 0xab71 0x8131 0x05a1 0x6a82 0x1c35
-EnvelopeFrameCounter: 2, LF flag: 0
-num: 62, height: 7968
-num: 63, height: 10080
-num: 64, height: 11008
-num: 65, height: 12224
-num: 66, height: 12320
-num: 67, height: 11552
-num: 68, height: 11040
-num: 69, height: 6976
-num: 70, height: 5824
-DSI 3, Sensor 2, PDCM 10: 0x27f1 0x021d 0x8102 0x1d26 0x0358 0x50a1 0x7f64 0xa171
-EnvelopeFrameCounter: 1, LF flag: 0
-num: 60, height: 800
-num: 62, height: 864
-num: 63, height: 1632
-num: 64, height: 1152
-num: 65, height: 928
-num: 66, height: 1120
-num: 67, height: 704
-num: 68, height: 672
-num: 69, height: 736
-num: 70, height: 544
-num: 71, height: 352
-DSI 3, Sensor 3, PDCM 11: 0x36f1 0x014b 0xc102 0x184f 0x4706 0x4d41 0x0246 0x46e1
-EnvelopeFrameCounter: 0, LF flag: 0
-DSI 3, Sensor 1, PDCM 12: 0x18f2 0x0000 0x0000 0x0000 0x0000 0x0000 0x0000 0x00ca
-EnvelopeFrameCounter: 3, LF flag: 0
-num: 71, height: 3456
-num: 72, height: 3520
-num: 73, height: 3008
-num: 74, height: 3616
-num: 75, height: 4192
-num: 76, height: 4576
-num: 77, height: 3776
-num: 78, height: 2560
-num: 79, height: 1248
-num: 80, height: 512
-num: 92, height: 256
-DSI 3, Sensor 2, PDCM 12: 0x28f1 0x034a 0x0250 0x1312 0x0c59 0x6669 0x57cb 0x4823
-EnvelopeFrameCounter: 1, LF flag: 0
-DSI 3, Sensor 3, PDCM 12: 0x37f2 0x0141 0x1447 0x4959 0x4546 0x1917 0x424a 0x5500
-EnvelopeFrameCounter: 2, LF flag: 0
-num: 62, height: 6592
-num: 63, height: 2560
-num: 64, height: 3488
-num: 65, height: 4544
-num: 66, height: 5376
-num: 67, height: 7776
-num: 68, height: 8000
-num: 69, height: 6464
-num: 70, height: 6656
-num: 71, height: 4928
-DSI 3, Sensor 1, PDCM 13: 0x19f1 0x0202 0xa17e 0x1d21 0x1a81 0x0b07 0x7006 0x76f7
-EnvelopeFrameCounter: 4, LF flag: 0
-num: 123, height: 256
-num: 129, height: 448
-num: 130, height: 352
-num: 132, height: 256
-num: 134, height: 640
-num: 135, height: 1024
-num: 136, height: 1088
-num: 137, height: 1408
-DSI 3, Sensor 2, PDCM 13: 0x29f1 0x04de 0x00c5 0x0643 0xc143 0xc10c 0x0c02 0x0ada
-EnvelopeFrameCounter: 0, LF flag: 0
-DSI 3, Sensor 1, PDCM 14: 0x1af2 0x0000 0x0000 0x0000 0x0000 0x0000 0x0000 0x008c
-EnvelopeFrameCounter: 2, LF flag: 0
-num: 72, height: 416
-num: 73, height: 352
-num: 75, height: 384
-num: 76, height: 352
-num: 77, height: 512
-num: 78, height: 448
-num: 79, height: 320
-num: 80, height: 384
-num: 103, height: 448
-num: 104, height: 384
-DSI 3, Sensor 3, PDCM 14: 0x38f1 0x0202 0x42c1 0x0141 0x0542 0x4402 0xd602 0x42c7
-EnvelopeFrameCounter: 3, LF flag: 0
-num: 72, height: 5856
-num: 73, height: 5248
-num: 74, height: 6144
-num: 75, height: 5920
-num: 76, height: 4192
-num: 77, height: 3136
-num: 78, height: 3616
-num: 79, height: 960
-num: 80, height: 1664
-num: 81, height: 480
-num: 82, height: 1184
-DSI 3, Sensor 1, PDCM 15: 0x1bf1 0x031d 0x531c 0x4776 0x610f 0xa153 0x1665 0x1630
-EnvelopeFrameCounter: 5, LF flag: 0
-num: 138, height: 2112
-num: 139, height: 2112
-num: 140, height: 1152
-num: 141, height: 1344
-num: 142, height: 2048
-num: 143, height: 2368
-num: 144, height: 6048
-num: 145, height: 5152
-num: 146, height: 640
-DSI 3, Sensor 2, PDCM 15: 0x2af1 0x0516 0x005e 0x0616 0x0a81 0x335c 0xa24d 0x8168
-EnvelopeFrameCounter: 2, LF flag: 0
-DSI 3, Sensor 3, PDCM 15: 0x39f2 0x0248 0x4c4c 0x4953 0x48e1 0xc344 0x0000 0xc22b
-EnvelopeFrameCounter: 0, LF flag: 0
-DSI 3, Sensor 1, PDCM 16: 0x1cf2 0x0000 0x0000 0x0000 0x0000 0x0000 0x0000 0x0046
-EnvelopeFrameCounter: 6, LF flag: 0
-num: 147, height: 3232
-num: 148, height: 1984
-num: 149, height: 992
-num: 150, height: 288
-num: 151, height: 704
-num: 152, height: 640
-num: 153, height: 1024
-num: 154, height: 608
-num: 156, height: 672
-num: 157, height: 576
-num: 158, height: 672
-DSI 3, Sensor 2, PDCM 16: 0x2bf1 0x0611 0x675f 0x560d 0x420c 0x4dc1 0x0243 0x03a1
-EnvelopeFrameCounter: 4, LF flag: 0
-num: 83, height: 768
-num: 84, height: 1792
-num: 85, height: 1408
-num: 86, height: 832
-num: 87, height: 256
-num: 134, height: 288
-num: 136, height: 352
-num: 138, height: 256
-DSI 3, Sensor 1, PDCM 17: 0x1df1 0x044d 0x204c 0x5252 0xe1ce 0x01c1 0x02c1 0x438a
-EnvelopeFrameCounter: 3, LF flag: 0
-num: 142, height: 288
-num: 143, height: 320
-num: 144, height: 416
-num: 145, height: 992
-num: 146, height: 800
-num: 147, height: 448
-num: 148, height: 288
-num: 150, height: 608
-num: 151, height: 1728
-DSI 3, Sensor 3, PDCM 17: 0x3af1 0x03e1 0xc543 0x0103 0x1246 0x4b45 0xc10a 0x23a1
-EnvelopeFrameCounter: 0, LF flag: 0
-DSI 3, Sensor 1, PDCM 18: 0x1ef2 0x0000 0x0000 0x0000 0x0000 0x0000 0x0000 0x0000
-EnvelopeFrameCounter: 7, LF flag: 0
-num: 159, height: 1280
-num: 160, height: 1760
-num: 161, height: 3136
-num: 162, height: 3808
-num: 163, height: 2304
-num: 164, height: 544
-num: 165, height: 288
-num: 167, height: 320
-num: 168, height: 480
-num: 169, height: 1248
-num: 170, height: 1536
-DSI 3, Sensor 2, PDCM 18: 0x2cf1 0x0713 0x0f2b 0x156f 0x7748 0xc101 0x0518 0x09ee
-EnvelopeFrameCounter: 3, LF flag: 0
-DSI 3, Sensor 3, PDCM 18: 0x3bf2 0x0300 0x0405 0x0505 0x0141 0x4642 0x4243 0x4139
-EnvelopeFrameCounter: 5, LF flag: 0
-num: 139, height: 352
-num: 140, height: 576
-num: 141, height: 384
-num: 142, height: 256
-num: 144, height: 512
-num: 145, height: 832
-num: 146, height: 480
-num: 147, height: 1632
-num: 148, height: 1504
-num: 149, height: 416
-num: 150, height: 1152
-DSI 3, Sensor 1, PDCM 19: 0x1ff1 0x0503 0x0746 0x44c1 0x080a 0x4b24 0x4462 0x1760
-EnvelopeFrameCounter: 8, LF flag: 0
-num: 171, height: 1088
-num: 172, height: 1024
-num: 173, height: 864
-num: 174, height: 1344
-num: 175, height: 1152
-num: 176, height: 256
-num: 177, height: 256
-num: 178, height: 640
-num: 179, height: 544
-num: 180, height: 192
-num: 181, height: 544
-num: 182, height: 384
-DSI 3, Sensor 2, PDCM 19: 0x2df1 0x084e 0x4245 0x0f46 0x5c00 0x0c43 0x4b0b 0x4514
-EnvelopeFrameCounter: 4, LF flag: 0
-num: 152, height: 2592
-num: 153, height: 1792
-num: 154, height: 416
-num: 155, height: 512
-num: 156, height: 384
-num: 158, height: 448
-num: 159, height: 288
-num: 160, height: 416
-num: 161, height: 256
-num: 168, height: 288
-DSI 3, Sensor 3, PDCM 19: 0x3cf1 0x041b 0x596b 0x0344 0xc102 0x4504 0x45c6 0x010e
-EnvelopeFrameCounter: 0, LF flag: 0
-DSI 3, Sensor 1, PDCM 20: 0x10f2 0x0000 0x0000 0x0000 0x0000 0x0000 0x0000 0x00fd
-EnvelopeFrameCounter: 9, LF flag: 0
-num: 183, height: 192
-num: 184, height: 384
-num: 186, height: 192
-num: 187, height: 224
-num: 188, height: 576
-num: 189, height: 416
-num: 190, height: 192
-num: 191, height: 192
-num: 193, height: 160
-num: 194, height: 256
-DSI 3, Sensor 2, PDCM 20: 0x2ef1 0x0946 0x06c1 0x4601 0x0b45 0x4700 0xc141 0x0385
-EnvelopeFrameCounter: 4, LF flag: 0
-DSI 3, Sensor 3, PDCM 20: 0x3df2 0x0400 0x0341 0x0704 0x0001 0x0005 0x4349 0x496b
-EnvelopeFrameCounter: 6, LF flag: 0
-num: 151, height: 3264
-num: 152, height: 2656
-num: 153, height: 3296
-num: 154, height: 6688
-num: 155, height: 5312
-num: 156, height: 2272
-num: 157, height: 832
-num: 158, height: 864
-num: 159, height: 640
-DSI 3, Sensor 1, PDCM 21: 0x11f1 0x0681 0x0253 0x1481 0x2a6b 0xa15f 0x6d01 0x475a
-EnvelopeFrameCounter: 10, LF flag: 0
-num: 197, height: 192
-num: 198, height: 128
-num: 199, height: 128
-num: 200, height: 160
-num: 201, height: 160
-num: 202, height: 256
-num: 203, height: 192
-num: 204, height: 160
-num: 206, height: 384
-num: 207, height: 416
-DSI 3, Sensor 2, PDCM 21: 0x2ff1 0x0ac2 0x4242 0x0001 0x0003 0x4241 0xc107 0x01a9
-EnvelopeFrameCounter: 5, LF flag: 0
-num: 170, height: 448
-num: 171, height: 416
-num: 172, height: 896
-num: 173, height: 960
-num: 174, height: 384
-num: 178, height: 416
-num: 179, height: 448
-num: 180, height: 288
-num: 186, height: 192
-DSI 3, Sensor 3, PDCM 21: 0x3ef1 0x05c1 0x0541 0x0f02 0x52c3 0x0101 0x45c5 0x4343
-EnvelopeFrameCounter: 0, LF flag: 0
-DSI 3, Sensor 1, PDCM 22: 0x12f2 0x0000 0x0000 0x0000 0x0000 0x0000 0x0000 0x00bb
-DSI 3, Sensor 2, PDCM 22: 0x20f1 0x0b49 0xc300 0x03c1 0x0901 0x4cc1 0x0443 0x0023
+# DSI 3, Sensor 2, PDCM 07: 0x27f1 0x00de 0x8514 0xcf00 0x6e50 0x1849 0x1018 0x617f
+
+DSI 3, Sensor 1, PDCM 08: 0x15f2 0x00e1 0xc684 0x13c7 0x008d 0x368a 0x1bb6 0x407d
+
+DSI 3, Sensor 3, PDCM 08: 0x35f1 0x00e1 0xc585 0x0ac6 0x0085 0x3792 0x18b1 0x4752
+
+DSI 3, Sensor 1, PDCM 09: 0x16f2 0x0183 0x00c3 0xa563 0xa240 0x8104 0x1aa1 0x750b
+
+DSI 3, Sensor 2, PDCM 09: 0x28f2 0x00e1 0xc184 0x04c2 0x00c1 0x812b 0xc186 0x3e40
+
+DSI 3, Sensor 3, PDCM 09: 0x36f1 0x01a4 0x51c5 0xa679 0x5c49 0x1a01 0x345c 0xc135
+
+DSI 3, Sensor 1, PDCM 10: 0x17f2 0x0236 0x0281 0x1f3c 0x7b81 0x2782 0x020c 0x06d7
+
+# DSI 3, Sensor 2, PDCM 10: 0x29f1 0x0160 0x2e20 0x784a 0x110e 0x4a51 0x4801 0x0cd0
+
+DSI 3, Sensor 3, PDCM 11: 0x37f1 0x0278 0x4b0a 0x510c 0x1d56 0x3b48 0x1078 0x5ee9
+
+DSI 3, Sensor 1, PDCM 12: 0x18f2 0x03a1 0x55a1 0x5479 0x11a1 0x5573 0x4909 0x7152
+
+DSI 3, Sensor 3, PDCM 12: 0x38f1 0x031d 0xc11f 0x580a 0x455c 0x0f45 0x57c2 0x0299
+
+DSI 3, Sensor 2, PDCM 13: 0x2af2 0x01a2 0x7e91 0x1dac 0x41a9 0x6fc5 0xa167 0x1e99
+
+DSI 3, Sensor 3, PDCM 13: 0x39f1 0x0441 0x4300 0xc142 0xc901 0xde03 0x0202 0x44ab
+
+DSI 3, Sensor 1, PDCM 14: 0x19f2 0x0468 0x5c06 0x624b 0x360e 0x7d1f 0x414e 0x5087
+
+DSI 3, Sensor 3, PDCM 14: 0x3af1 0x0542 0xc141 0x09c1 0x4244 0x0243 0x041b 0x4859
+
+# DSI 3, Sensor 2, PDCM 14: 0x2bf1 0x0281 0x0f51 0xa169 0x443a 0x8125 0x5768 0xa324
+
+DSI 3, Sensor 3, PDCM 15: 0x3bf1 0x065a 0x0302 0xc200 0x0141 0x0241 0x4341 0x07b4
+
+DSI 3, Sensor 1, PDCM 16: 0x1af2 0x0514 0x54c6 0x4441 0x42c5 0x0407 0x0e00 0x00fb
+
+DSI 3, Sensor 3, PDCM 16: 0x3cf1 0x0705 0x0247 0xc142 0x4400 0x0d4a 0xc445 0x4181
+
+DSI 3, Sensor 2, PDCM 17: 0x2cf2 0x0214 0xa141 0x460c 0x1007 0x6663 0x6ba1 0x4422
+
+DSI 3, Sensor 3, PDCM 17: 0x3df1 0x08c2 0x00c2 0x0110 0x484a 0x0307 0x4145 0x46e3
+
+DSI 3, Sensor 1, PDCM 18: 0x1bf2 0x064a 0x4d41 0xc741 0xc103 0xc142 0x01c1 0x41be
+
+DSI 3, Sensor 3, PDCM 18: 0x3ef1 0x09c2 0x0142 0x02c6 0x42c2 0x0000 0xc100 0xc70f
+
+# DSI 3, Sensor 2, PDCM 18: 0x2df1 0x0352 0x4983 0x3082 0x2181 0x1462 0xa170 0xa223
+
+DSI 3, Sensor 3, PDCM 19: 0x3ff1 0x0a03 0x41c2 0x4141 0xc500 0x01c2 0x4103 0x083b
+
+DSI 3, Sensor 1, PDCM 20: 0x1cf2 0x07c1 0x0341 0x41c2 0x4100 0x0109 0x0a4a 0x4acb
+
+DSI 3, Sensor 2, PDCM 20: 0x2ef2 0x0379 0x1408 0x504d 0x1a0b 0x630c 0x5718 0x4786
+
+DSI 3, Sensor 3, PDCM 20: 0x30f1 0x0b41 0x4900 0x00c1 0x41c5 0x00c1 0x00db 0x0174
+
+# DSI 3, Sensor 2, PDCM 20: 0x2ff1 0x044a 0xa175 0xa155 0x795b 0x2c08 0x5a5e 0x5352
+
+DSI 3, Sensor 1, PDCM 21: 0x1df2 0x0804 0x0a47 0x4408 0x1901 0x6320 0x2ca1 0x413f
+
+DSI 3, Sensor 3, PDCM 21: 0x31f1 0x0cc5 0x41c1 0x00df 0x00c2 0x00c5 0x00ce 0x019d
+
+DSI 3, Sensor 1, PDCM 22: 0x1ef2 0x0981 0x021e 0xa154 0x8111 0x2d4a 0x6168 0x54a8
+
+DSI 3, Sensor 2, PDCM 22: 0x20f2 0x0401 0x0153 0x00d4 0x0503 0x0801 0x4101 0x494d
+
+DSI 3, Sensor 3, PDCM 22: 0x32f1 0x0d08 0x4643 0xcf00 0x0000 0x0000 0x0000 0x004d
+
+DSI 3, Sensor 1, PDCM 23: 0x1ff2 0x0a5d 0xc148 0x150a 0x495e 0x185b 0x3a19 0x6322
+
+DSI 3, Sensor 3, PDCM 23: 0x33f1 0x0d00 0x0000 0x0000 0x0000 0x0000 0x0000 0x0096
+
+# DSI 3, Sensor 2, PDCM 23: 0x21f1 0x0543 0xc101 0xd10b 0x0104 0x4303 0x0801 0x41e0
+
+DSI 3, Sensor 1, PDCM 24: 0x10f2 0x0b55 0x4ec1 0x46c1 0x4613 0x4703 0x0948 0x4a6a
+
+DSI 3, Sensor 2, PDCM 24: 0x22f2 0x0509 0x47c2 0x4ac1 0x040b 0x0709 0x4700 0x4502
+
+DSI 3, Sensor 3, PDCM 24: 0x34f1 0x0d00 0x0000 0x0000 0x0000 0x0000 0x0000 0x007f
+
+DSI 3, Sensor 2, PDCM 24: 0x23f1 0x0645 0x4943 0x45c1 0x0205 0x080c 0x5525 0x171a
+
+# DSI 3, Sensor 2, PDCM 14: 0x2bf1 0x0281 0x0f51 0xa169 0x443a 0x8125 0x5768 0xa324
 
 # DSI 3, Sensor 1, PDCM 08: 0x16f4 0x4613 0xf51d 0x3d4e 0x02a5 0x3a20 0x3e0b 0xb43f
 # DSI 3, Sensor 1, PDCM 09: 0x17f0 0x0000 0x0000 0x0000 0x0000 0x0000 0x0000 0x00ad

@@ -8,7 +8,7 @@ def extract_pdcms(raw_pdcm_infos):
     for info in raw_pdcm_infos:
         # print(info)
         if info:
-            m = re.match(r'^(DSI \d{1,2}, Sensor \d{1,2}, PDCM (\d{1,5}):)(( 0(x|X)[0-9(a-z|A-Z)]{4}){8})', info)
+            m = re.match(r'^(DSI \d{1,2}, Sensor 2, PDCM (\d{1,5}):)(( 0(x|X)[0-9(a-z|A-Z)]{4}){8})', info)
             if m:
                 if m.group(3):
                     frame_str = m.group(3).strip(' ').split(' ')
