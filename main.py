@@ -7,6 +7,7 @@ import peak_info_reader
 import raw_envelope_reader
 import pdcm_extracter
 import peak_drawer
+import echo_reader
 
 import numpy as np
 from peak_raw_datas.raw_uart_info0_from_file import raw_uart_info0
@@ -29,6 +30,7 @@ if __name__ == '__main__':
     raw_uart_infos = raw_uart_info2.strip('\n').split('\n')
 
     pdcms = pdcm_extracter.extract_pdcms(raw_uart_infos)
+
     # peak_drawer.draw_peaks(pdcms)
     # peak_drawer.draw_envlopes(pdcms)
 
@@ -37,6 +39,9 @@ if __name__ == '__main__':
 
     # peak_drawer.draw_originals_and_sendouts()
     peak_drawer.draw_baseon_delta_height(pdcms)
+
+    # echos = echo_reader.read(raw_uart_infos)
+    # peak_drawer.draw_ehcos_after_pars(echos)
 
 
 

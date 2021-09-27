@@ -155,24 +155,38 @@ def draw_originals_and_sendouts():
 def draw_baseon_delta_height(pdcms):
     xs_ = []
     ys_ = []
-    prev_echo = [0, 0]
+    prev_echo = [[0, 0], [0, 0]]
 
     for pdcm in pdcms:
         xs = []
         ys = []
-        prev_echo = extract_peaks(xs, ys, pdcm, prev_echo)
+        extract_peaks(xs, ys, pdcm, prev_echo)
         if len(xs) > 0:
             for x, y in zip(xs, ys):
-                xs_.append(x)
+                xs_.append(round(x*80*17.2/1000, 2))
                 ys_.append(32*y)
     plt.plot(xs_, ys_)
     for a, b in zip(xs_, ys_):
-        plt.text(a, b, (a, b), ha='center', va='bottom', fontsize=6)
+        if (a < 170) and (a > 130):
+            plt.text(a, b, (a, b), ha='center', va='bottom', fontsize=6)
 
-    # original_ys = [45122,47610,9460	,25685,2073	,3154	,2599	,1130	,1391	,1415	,2589	,3955	,7032	,7647	,8565	,9333	,10349,11259,10461,10923,9980	,6925	,5750	,2484	,2856	,2811	,2470	,3122	,3302	,2593	,1941	,546	 ,340	 ,2656	,3129	,1223	,1149	,284	 ,515	 ,490	 ,1290	,850	 ,291	 ,306	 ,375	 ,295	 ,620	 ,925	 ,957	 ,686	 ,719	 ,826	 ,464	 ,384	 ,328	 ,576	 ,515	 ,328	 ,415	 ,263	 ,289	 ,322	 ,333	 ,780	 ,1314	,795	 ,646	 ,387	 ,583	 ,1456	,2522	,1869	,760	 ,279	 ,316	 ,726	 ,648	 ,336	 ,339	 ,420	 ,263	 ,260	 ,134	 ,158	 ,235	 ,214	 ,204	 ,189	 ,195	 ,153	 ,181	 ,180	 ,263	 ,442	 ,771	 ,1555	,1022	,274	 ,280	 ,357	 ,377	 ,412	 ,235	 ,748	 ,958	 ,412	 ,177	 ,221	 ,256	 ,376	 ,489	 ,1186	,1271	,393	 ,282	 ,270	 ,250	 ,151	 ,173	 ,294	 ,176	 ,182	 ,175	 ,148	 ,170	 ,444	 ,330	 ,441	 ,827	 ,438	 ,181	 ,440	 ,364	 ,133	 ,313	 ,174	 ,175	 ,261	 ,333	 ,294	 ,190	 ,219	 ,213	 ,227	 ,134	 ,170	 ,197	 ,194	 ,208	 ,240	 ,256	 ,236	 ,276	 ,142	 ,159	 ,156	 ,173	 ,160	 ,454	 ,1208	,1239	,530	 ,192	 ,196	 ,223	 ,367	 ,435	 ,220	 ,240	 ,276	 ,139	 ,235	 ,208	 ,375	 ,356	 ,163	 ,131	 ,467	 ,528	 ,358	 ,183	 ,185	 ,162	 ,179	 ,148	 ,173	 ,134	 ,342	 ,198	 ,162	 ,372	 ,333	 ,170	 ,133	 ,135	 ,415	 ,432	 ,175	 ,130]
     # if len(original_ys) > len(xs_):
     #     original_ys = original_ys[0:len(xs_)]
     # plt.plot(xs_, original_ys)
     # for a, b in zip(xs_, original_ys):
     #     plt.text(a, b, (a, b), ha='center', va='bottom', fontsize=6)
+
+    plt.show()
+
+
+def draw_ehcos_after_pars(echos):
+    xs = []
+    ys = []
+    for echo in echos:
+        xs.append(round(echo[0]*17.2*80/1000, 2))
+        ys.append(echo[1])
+
+    plt.plot(xs, ys)
+    for a, b in zip(xs, ys):
+        plt.text(a, b, (a, b), ha='center', va='bottom', fontsize=4)
     plt.show()
