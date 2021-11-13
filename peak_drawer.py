@@ -2,7 +2,7 @@ import peak_info_reader
 import raw_envelope_reader
 import matplotlib.pyplot as plt
 import envelope_and_peaks_reader_baseon_latest
-from uart_envlp.threshold_peak_delta_struct_reader import extract_peaks
+from uart_envlp.threshold_peak_delta_struct_reader import extract_peaks_filter_1_2
 
 
 def draw_peaks(pdcms):
@@ -152,28 +152,44 @@ def draw_originals_and_sendouts():
     plt.show()
 
 
-def draw_baseon_delta_height(pdcms):
+def get_echo_nums_heights(pdcms):
     xs_ = []
     ys_ = []
     prev_echo = [[0, 0], [0, 0]]
 
     for pdcm in pdcms:
-        xs = []
-        ys = []
-        extract_peaks(xs, ys, pdcm, prev_echo)
-        if len(xs) > 0:
-            for x, y in zip(xs, ys):
-                xs_.append(round(x*80*17.2/1000, 2))
-                ys_.append(32*y)
-    plt.plot(xs_, ys_)
-    for a, b in zip(xs_, ys_):
-        if (a < 170) and (a > 130):
-            plt.text(a, b, (a, b), ha='center', va='bottom', fontsize=6)
+        xs_f1 = []
+        ys_f1 = []
+        xs_f2 = []
+        ys_f2 = []
+        extract_peaks_filter_1_2(xs_f1, ys_f1, pdcm, prev_echo)
+        if len(xs_f1) > 0:
+            for x_f1, y_f1 in zip(xs_f1, ys_f1):
+                xs_.append(x_f1) #round(x_f1*80*17.2/1000, 2))
+                ys_.append(32 * y_f1)
 
-    # if len(original_ys) > len(xs_):
-    #     original_ys = original_ys[0:len(xs_)]
-    # plt.plot(xs_, original_ys)
-    # for a, b in zip(xs_, original_ys):
+    return xs_, ys_
+
+
+def draw_baseon_delta_height(pdcms1, pdcms2, pdcms3):
+    xs1_, ys1_ = get_echo_nums_heights(pdcms1)
+    # xs2_, ys2_ = get_echo_nums_heights(pdcms2)
+    # xs3_, ys3_ = get_echo_nums_heights(pdcms3)
+
+    plt.plot(xs1_, ys1_)
+    # plt.plot(xs2_, ys2_)
+    # plt.plot(xs3_, ys3_)
+
+    for a, b in zip(xs1_, ys1_):
+        plt.text(a, b, (a, b), ha='center', va='bottom', fontsize=6)
+    # for c, d in zip(xs2_, ys2_):
+    #     plt.text(c, d, (c, d), ha='center', va='bottom', fontsize=6)
+
+
+    # if len(original_ys) > len(xs1_):
+    #     original_ys = original_ys[0:len(xs1_)]
+    # plt.plot(xs1_, original_ys)
+    # for a, b in zip(xs1_, original_ys):
     #     plt.text(a, b, (a, b), ha='center', va='bottom', fontsize=6)
 
     plt.show()
@@ -188,5 +204,5 @@ def draw_ehcos_after_pars(echos):
 
     plt.plot(xs, ys)
     for a, b in zip(xs, ys):
-        plt.text(a, b, (a, b), ha='center', va='bottom', fontsize=4)
+        plt.text(a, b, (a, b), ha='center', va='bottom', fontsize=6)
     plt.show()

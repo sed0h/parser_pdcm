@@ -14,6 +14,9 @@ from peak_raw_datas.raw_uart_info0_from_file import raw_uart_info0
 from peak_raw_datas.raw_uart_info1_from_file import raw_uart_info1
 from raw_uart_info2_from_file import raw_uart_info2
 
+from sensor_echos import echos_extracter
+from sensor_echos.echos_info import echos_prints
+from sensor_echos.echos_info import echos_seem_abnormal
 
 # def print_hi(name):
 #     # Use a breakpoint in the code line below to debug your script.
@@ -25,11 +28,19 @@ from raw_uart_info2_from_file import raw_uart_info2
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     # print_hi('PyCharm')
-    pdcms = []
+    '''
+    sensor1_pdcms = []
+    sensor2_pdcms = []
+    sensor3_pdcms = []
 
     raw_uart_infos = raw_uart_info2.strip('\n').split('\n')
 
-    pdcms = pdcm_extracter.extract_pdcms(raw_uart_infos)
+    sensor1_to_match = r'^(DSI \d{1,2}, Sensor 1, PDCM (\d{1,5}):)(( 0(x|X)[0-9(a-z|A-Z)]{4}){8})'
+    sensor1_pdcms = pdcm_extracter.extract_pdcms(raw_uart_infos, sensor1_to_match)
+    sensor2_to_match = r'^(DSI \d{1,2}, Sensor 2, PDCM (\d{1,5}):)(( 0(x|X)[0-9(a-z|A-Z)]{4}){8})'
+    sensor2_pdcms = pdcm_extracter.extract_pdcms(raw_uart_infos, sensor2_to_match)
+    sensor3_to_match = r'^(DSI \d{1,2}, Sensor 3, PDCM (\d{1,5}):)(( 0(x|X)[0-9(a-z|A-Z)]{4}){8})'
+    sensor3_pdcms = pdcm_extracter.extract_pdcms(raw_uart_infos, sensor3_to_match)
 
     # peak_drawer.draw_peaks(pdcms)
     # peak_drawer.draw_envlopes(pdcms)
@@ -38,11 +49,21 @@ if __name__ == '__main__':
     # peak_drawer.draw_baseon_latest(pdcms)
 
     # peak_drawer.draw_originals_and_sendouts()
-    peak_drawer.draw_baseon_delta_height(pdcms)
 
+    peak_drawer.draw_baseon_delta_height(sensor1_pdcms, sensor2_pdcms, sensor3_pdcms)
     # echos = echo_reader.read(raw_uart_infos)
     # peak_drawer.draw_ehcos_after_pars(echos)
+    '''
 
+    # raw_echos_strs = echos_prints.strip('\n').split('\n')
+    raw_echos_strs = echos_seem_abnormal.strip('\n').split('\n')
+    str_to_match = r'^.+\[(\d{1,3})\]echonum=(\d{1,3}) echoheight=(\d{1,5})'
+    echo_nums = []
+    echo_heights = []
+    echo_nums, echo_heights = echos_extracter.read_and_draw_echos(raw_echos_strs, str_to_match)
+
+    # print(len(echo_nums))
+    # print(len(echo_heights))
 
 
     # if len(argv) >= 3:

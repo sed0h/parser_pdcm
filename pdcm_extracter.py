@@ -1,14 +1,14 @@
 import re
 
 
-def extract_pdcms(raw_pdcm_infos):
+def extract_pdcms(raw_pdcm_infos, match_str):
     local_pdcms = []
     local_single_pdcm = []
 
     for info in raw_pdcm_infos:
         # print(info)
         if info:
-            m = re.match(r'^(DSI \d{1,2}, Sensor \d{1,2}, PDCM (\d{1,5}):)(( 0(x|X)[0-9(a-z|A-Z)]{4}){8})', info)
+            m = re.match(match_str, info)
             if m:
                 if m.group(3):
                     frame_str = m.group(3).strip(' ').split(' ')
