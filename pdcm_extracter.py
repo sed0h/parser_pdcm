@@ -1,4 +1,5 @@
 import re
+from impedance_measurement.impedance_raw_parser import parse_impedance_raw
 
 
 def extract_pdcms(raw_pdcm_infos, match_str):

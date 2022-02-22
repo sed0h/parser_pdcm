@@ -5,6 +5,26 @@ import envelope_and_peaks_reader_baseon_latest
 from uart_envlp.threshold_peak_delta_struct_reader import extract_peaks_filter_1_2
 
 
+def draw_time_voltage(t, v):
+    tx = []
+    vy = []
+    i = 0
+    for ts, vs in zip(t, v):
+        tx.append(ts*1000/0.08)
+        vy.append(vs)
+        i = i+1
+        if i > 100:
+            plt.plot(tx, vy)
+            plt.grid()
+            plt.xlabel('time / S')
+            plt.ylabel('ENV output / V')
+            plt.show()
+            tx = []
+            vy = []
+            i = 0
+
+
+
 def draw_peaks(pdcms):
     xs = []
     ys = []
@@ -172,19 +192,20 @@ def get_echo_nums_heights(pdcms):
 
 
 def draw_baseon_delta_height(pdcms1, pdcms2, pdcms3):
-    xs1_, ys1_ = get_echo_nums_heights(pdcms1)
+    # xs1_, ys1_ = get_echo_nums_heights(pdcms1)
     # xs2_, ys2_ = get_echo_nums_heights(pdcms2)
-    # xs3_, ys3_ = get_echo_nums_heights(pdcms3)
+    xs3_, ys3_ = get_echo_nums_heights(pdcms3)
 
-    plt.plot(xs1_, ys1_)
+    # plt.plot(xs1_, ys1_)
     # plt.plot(xs2_, ys2_)
-    # plt.plot(xs3_, ys3_)
+    plt.plot(xs3_, ys3_)
 
-    for a, b in zip(xs1_, ys1_):
-        plt.text(a, b, (a, b), ha='center', va='bottom', fontsize=6)
+    # for a, b in zip(xs1_, ys1_):
+    #     plt.text(a, b, (a, b), ha='center', va='bottom', fontsize=6)
     # for c, d in zip(xs2_, ys2_):
     #     plt.text(c, d, (c, d), ha='center', va='bottom', fontsize=6)
-
+    for c, d in zip(xs3_, ys3_):
+        plt.text(c, d, (c, d), ha='center', va='bottom', fontsize=6)
 
     # if len(original_ys) > len(xs1_):
     #     original_ys = original_ys[0:len(xs1_)]

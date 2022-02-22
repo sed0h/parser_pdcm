@@ -3,7 +3,7 @@ def extract_peaks_filter_1_2(xs, ys, Peak_List, prev):
 
     pdcm_frame_counter = (Peak_List[0] >> 8) & 0xFF
     subtype = Peak_List[0] & 0x000F
-    if(2 == subtype) :
+    if(3 == subtype) :
         envelp_frame_counter = Peak_List[1] >> 8
         print("EnvCnt" + str(envelp_frame_counter))
 
